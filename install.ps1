@@ -38,7 +38,8 @@ Write-Host "Checking prerequisites..." -ForegroundColor Yellow
 try {
     $null = Get-Command git -ErrorAction Stop
     Write-Host "  ✓ Git found" -ForegroundColor Green
-} catch {
+}
+catch {
     Write-Host "  ✗ Git not found. Install from https://git-scm.com/" -ForegroundColor Red
     exit 1
 }
@@ -52,7 +53,8 @@ $vscodePaths = @(
 
 if ($vscodePaths) {
     Write-Host "  ✓ VS Code found" -ForegroundColor Green
-} else {
+}
+else {
     Write-Host "  ⚠ VS Code not found in PATH (install may still work)" -ForegroundColor Yellow
 }
 
@@ -60,7 +62,8 @@ if ($vscodePaths) {
 try {
     $null = Get-Command node -ErrorAction Stop
     Write-Host "  ✓ Node.js found (MCP tools will work)" -ForegroundColor Green
-} catch {
+}
+catch {
     Write-Host "  ⚠ Node.js not found (MCP tools won't work, but plugin will)" -ForegroundColor Yellow
 }
 
@@ -73,11 +76,13 @@ if (Test-Path $InstallPath) {
     try {
         git pull --quiet
         Write-Host "  ✓ Updated to latest version" -ForegroundColor Green
-    } catch {
+    }
+    catch {
         Write-Host "  ⚠ Update failed, continuing with existing version" -ForegroundColor Yellow
     }
     Pop-Location
-} else {
+}
+else {
     Write-Host "Cloning Alex Agent Plugin..." -ForegroundColor Yellow
     git clone --quiet $RepoUrl $InstallPath
     Write-Host "  ✓ Cloned to $InstallPath" -ForegroundColor Green
@@ -93,7 +98,8 @@ Write-Host "Configuring VS Code..." -ForegroundColor Yellow
 
 if (Test-Path $SettingsPath) {
     $settings = Get-Content $SettingsPath -Raw | ConvertFrom-Json -AsHashtable
-} else {
+}
+else {
     $settings = @{}
     # Create directory if needed
     $settingsDir = Split-Path $SettingsPath -Parent
@@ -128,7 +134,8 @@ if ($settings["chat.plugins.paths"] -is [hashtable]) {
         $settings["chat.plugins.paths"][$normalizedPath] = $true
         $modified = $true
     }
-} else {
+}
+else {
     # Convert to hashtable if it's a different type
     $settings["chat.plugins.paths"] = @{ $normalizedPath = $true }
     $modified = $true
@@ -137,7 +144,8 @@ if ($settings["chat.plugins.paths"] -is [hashtable]) {
 if ($modified) {
     $settings | ConvertTo-Json -Depth 10 | Set-Content $SettingsPath -Encoding UTF8
     Write-Host "  ✓ VS Code settings updated" -ForegroundColor Green
-} else {
+}
+else {
     Write-Host "  ✓ VS Code settings already configured" -ForegroundColor Green
 }
 
@@ -159,7 +167,8 @@ $response = Read-Host "Open VS Code now? (Y/n)"
 if ($response -ne "n" -and $response -ne "N") {
     if ($vscodePaths) {
         Start-Process "code"
-    } else {
+    }
+    else {
         Write-Host "Could not find VS Code. Please open it manually." -ForegroundColor Yellow
     }
 }
