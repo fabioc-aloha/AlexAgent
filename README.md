@@ -86,7 +86,7 @@ Open the cloned `AlexAgent` folder in VS Code → **Source Control** panel → *
 | 90 extension commands | — | ✅ |
 | Episodic memory & task detection | — | ✅ |
 
-Want the full experience? Install the [Alex Cognitive Architecture extension](https://marketplace.visualstudio.com/items?itemName=fabioc-aloha.alex-cognitive-architecture) from the VS Code Marketplace.
+Want the full experience? Install the [Alex Cognitive Architecture extension](https://github.com/fabioc-aloha/Alex_Plug_In) from GitHub.
 
 ---
 
@@ -96,8 +96,7 @@ Apache 2.0 — See [LICENSE](LICENSE)
 
 ## Links
 
-- 🏠 [Alex Cognitive Architecture](https://github.com/fabioc-aloha/Alex_Plug_In) — Main project
-- 📦 [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=fabioc-aloha.alex-cognitive-architecture) — Full extension
+- 🏠 [Alex Cognitive Architecture](https://github.com/fabioc-aloha/Alex_Plug_In) — Main project & full extension
 - 📖 [User Manual](https://github.com/fabioc-aloha/Alex_Plug_In/blob/main/alex_docs/guides/USER-MANUAL.md) — Documentation
 
 ---
