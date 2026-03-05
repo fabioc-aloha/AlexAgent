@@ -77,7 +77,7 @@ When you switch tasks, attention doesn't fully transfer—residue from the previ
 | **Rhythmic** | Daily fixed-time deep blocks | Most professionals |
 | **Journalistic** | Opportunistic deep work | Experienced practitioners |
 
-**Recommended for Fabio**: Rhythmic philosophy with morning deep blocks (6-10 AM) for dissertation, bimodal when possible (full days for writing sprints).
+**Recommendation**: Rhythmic philosophy with daily fixed-time deep blocks works best for most professionals. Use bimodal when possible (full days for intensive sprints).
 
 ### Time Blocking
 

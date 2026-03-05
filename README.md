@@ -14,25 +14,41 @@ Alex is an AI cognitive architecture that makes GitHub Copilot smarter. Instead 
 
 ---
 
-## Quick Install (30 seconds)
+## Quick Install
 
-### Windows (PowerShell)
+1. **Clone** — `Ctrl+Shift+P` → **Git: Clone** → paste:
+   ```
+   https://github.com/fabioc-aloha/AlexAgent.git
+   ```
 
+2. **Configure** — Open the terminal in the cloned folder and run:
+
+   **Windows (PowerShell)**
+   ```powershell
+   .\setup.ps1
+   ```
+   **macOS / Linux**
+   ```bash
+   chmod +x setup.sh && ./setup.sh
+   ```
+
+3. **Reload** — `Ctrl+Shift+P` → **Developer: Reload Window**
+
+4. **Say hello** — Open Copilot Chat (`Ctrl+Alt+I`) and type "Who are you?"
+
+### Automatic Install (alternative)
+
+Prefer a single command? This clones the repo and configures VS Code in one step:
+
+**Windows (PowerShell)**
 ```powershell
 irm https://raw.githubusercontent.com/fabioc-aloha/AlexAgent/main/install.ps1 | iex
 ```
 
-### macOS / Linux (Bash)
-
+**macOS / Linux (Bash)**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/fabioc-aloha/AlexAgent/main/install.sh | bash
 ```
-
-### After Installation
-
-1. **Restart VS Code** (or press `Ctrl+Shift+P` → "Reload Window")
-2. **Open Copilot Chat** (`Ctrl+Alt+I`)
-3. **Say hello**: Type "Who are you?" — Alex will introduce himself
 
 ---
 
@@ -46,11 +62,7 @@ curl -fsSL https://raw.githubusercontent.com/fabioc-aloha/AlexAgent/main/install
 
 ## Updating
 
-```bash
-cd ~/.alex-agent && git pull
-```
-
-Then reload VS Code.
+Open the cloned `AlexAgent` folder in VS Code → **Source Control** panel → **Pull**. Then reload (`Ctrl+Shift+P` → **Developer: Reload Window**).
 
 ---
 
@@ -93,30 +105,22 @@ Apache 2.0 — See [LICENSE](LICENSE)
 ## Appendix
 
 <details>
-<summary><strong>Manual Installation</strong></summary>
+<summary><strong>Manual Installation (CLI)</strong></summary>
 
 #### Windows
 
 ```powershell
 git clone https://github.com/fabioc-aloha/AlexAgent.git $env:USERPROFILE\.alex-agent
+cd $env:USERPROFILE\.alex-agent
+.\setup.ps1
 ```
 
 #### macOS / Linux
 
 ```bash
 git clone https://github.com/fabioc-aloha/AlexAgent.git ~/.alex-agent
-```
-
-Then add to your VS Code `settings.json`:
-
-```json
-{
-  "chat.agent.enabled": true,
-  "chat.plugins.enabled": true,
-  "chat.plugins.paths": {
-    "~/.alex-agent/plugin": true
-  }
-}
+cd ~/.alex-agent
+chmod +x setup.sh && ./setup.sh
 ```
 
 </details>
