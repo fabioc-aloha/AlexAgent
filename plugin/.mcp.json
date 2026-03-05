@@ -1,0 +1,16 @@
+{
+    "mcpServers": {
+        "alex-cognitive-tools": {
+            "command": "node",
+            "args": [
+                "${pluginPath}/mcp/index.js"
+            ],
+            "env": {
+                "ALEX_PLUGIN_PATH": "${pluginPath}"
+            },
+            "tools": [
+                "*"
+            ]
+        }
+    }
+}

@@ -1,0 +1,134 @@
+<svg width="1280" height="420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="50%" style="stop-color:#1e1b4b"/>
+      <stop offset="100%" style="stop-color:#0c1a2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0078d4"/>
+      <stop offset="50%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#0078d4"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#14b8a6"/>
+      <stop offset="100%" style="stop-color:#0d9488"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="420" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04">
+    <line x1="0" y1="60" x2="1280" y2="60" stroke="#f1f5f9" stroke-width="0.5"/>
+    <line x1="0" y1="120" x2="1280" y2="120" stroke="#f1f5f9" stroke-width="0.5"/>
+    <line x1="0" y1="180" x2="1280" y2="180" stroke="#f1f5f9" stroke-width="0.5"/>
+    <line x1="0" y1="240" x2="1280" y2="240" stroke="#f1f5f9" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1280" y2="300" stroke="#f1f5f9" stroke-width="0.5"/>
+    <line x1="0" y1="360" x2="1280" y2="360" stroke="#f1f5f9" stroke-width="0.5"/>
+  </g>
+
+  <!-- Neural network nodes (left cluster) -->
+  <g opacity="0.25">
+    <circle cx="80" cy="100" r="3.5" fill="#14b8a6"/>
+    <circle cx="140" cy="70" r="3" fill="#14b8a6"/>
+    <circle cx="120" cy="150" r="4" fill="#14b8a6"/>
+    <circle cx="60" cy="180" r="3" fill="#14b8a6"/>
+    <circle cx="170" cy="130" r="3.5" fill="#14b8a6"/>
+    <circle cx="50" cy="120" r="2.5" fill="#0d9488"/>
+    <circle cx="190" cy="80" r="2.5" fill="#0d9488"/>
+    <line x1="80" y1="100" x2="140" y2="70" stroke="#14b8a6" stroke-width="0.8" opacity="0.6"/>
+    <line x1="80" y1="100" x2="120" y2="150" stroke="#14b8a6" stroke-width="0.8" opacity="0.6"/>
+    <line x1="140" y1="70" x2="170" y2="130" stroke="#14b8a6" stroke-width="0.8" opacity="0.4"/>
+    <line x1="120" y1="150" x2="60" y2="180" stroke="#14b8a6" stroke-width="0.8" opacity="0.4"/>
+    <line x1="170" y1="130" x2="190" y2="80" stroke="#14b8a6" stroke-width="0.8" opacity="0.3"/>
+    <line x1="50" y1="120" x2="80" y2="100" stroke="#0d9488" stroke-width="0.8" opacity="0.3"/>
+  </g>
+
+  <!-- Neural network nodes (right cluster) -->
+  <g opacity="0.25">
+    <circle cx="1200" cy="280" r="3.5" fill="#7c3aed"/>
+    <circle cx="1150" cy="320" r="3" fill="#7c3aed"/>
+    <circle cx="1170" cy="250" r="4" fill="#7c3aed"/>
+    <circle cx="1230" cy="340" r="3" fill="#6366f1"/>
+    <circle cx="1120" cy="290" r="3.5" fill="#6366f1"/>
+    <circle cx="1240" cy="260" r="2.5" fill="#6366f1"/>
+    <circle cx="1100" cy="330" r="2.5" fill="#7c3aed"/>
+    <line x1="1200" y1="280" x2="1150" y2="320" stroke="#7c3aed" stroke-width="0.8" opacity="0.6"/>
+    <line x1="1200" y1="280" x2="1170" y2="250" stroke="#7c3aed" stroke-width="0.8" opacity="0.6"/>
+    <line x1="1150" y1="320" x2="1120" y2="290" stroke="#7c3aed" stroke-width="0.8" opacity="0.4"/>
+    <line x1="1170" y1="250" x2="1240" y2="260" stroke="#6366f1" stroke-width="0.8" opacity="0.4"/>
+    <line x1="1230" y1="340" x2="1100" y2="330" stroke="#6366f1" stroke-width="0.8" opacity="0.3"/>
+  </g>
+
+  <!-- Bottom scattered nodes -->
+  <g opacity="0.15">
+    <circle cx="300" cy="350" r="2" fill="#14b8a6"/>
+    <circle cx="400" cy="370" r="2.5" fill="#0078d4"/>
+    <circle cx="500" cy="340" r="2" fill="#7c3aed"/>
+    <circle cx="800" cy="360" r="2.5" fill="#14b8a6"/>
+    <circle cx="900" cy="340" r="2" fill="#0078d4"/>
+    <circle cx="1000" cy="370" r="2" fill="#7c3aed"/>
+    <line x1="300" y1="350" x2="400" y2="370" stroke="#334155" stroke-width="0.5"/>
+    <line x1="400" y1="370" x2="500" y2="340" stroke="#334155" stroke-width="0.5"/>
+    <line x1="800" y1="360" x2="900" y2="340" stroke="#334155" stroke-width="0.5"/>
+    <line x1="900" y1="340" x2="1000" y2="370" stroke="#334155" stroke-width="0.5"/>
+  </g>
+
+  <!-- Plugin icon (stylized plug + brain) -->
+  <g transform="translate(440, 80)" filter="url(#softglow)">
+    <!-- Brain outline -->
+    <path d="M 24 8 C 24 4, 28 0, 34 0 C 38 0, 42 2, 44 6 C 46 2, 52 0, 56 2 C 62 4, 64 10, 62 16 C 66 18, 68 24, 66 30 C 68 34, 66 40, 62 42 C 62 48, 56 52, 50 50 C 46 54, 40 54, 36 50 C 32 54, 26 52, 24 48 C 18 48, 14 42, 16 36 C 12 32, 12 26, 16 22 C 14 16, 16 10, 24 8 Z"
+          fill="none" stroke="url(#accent)" stroke-width="2.5" opacity="0.7"/>
+    <!-- Brain center line -->
+    <path d="M 40 4 C 38 14, 42 24, 38 34 C 36 40, 40 48, 40 52"
+          fill="none" stroke="url(#accent)" stroke-width="1.5" opacity="0.4"/>
+    <!-- Connection dots -->
+    <circle cx="30" cy="20" r="2" fill="#0078d4" opacity="0.6"/>
+    <circle cx="50" cy="18" r="2" fill="#7c3aed" opacity="0.6"/>
+    <circle cx="34" cy="36" r="2" fill="#14b8a6" opacity="0.6"/>
+    <circle cx="48" cy="34" r="2" fill="#6366f1" opacity="0.6"/>
+  </g>
+
+  <!-- Main title: ALEX -->
+  <text x="640" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="96" font-weight="800"
+        text-anchor="middle" fill="url(#accent)" filter="url(#glow)" letter-spacing="8">
+    ALEX
+  </text>
+
+  <!-- Subtitle -->
+  <text x="640" y="255" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600"
+        text-anchor="middle" fill="#f1f5f9" opacity="0.9" letter-spacing="6">
+    AGENT PLUGIN
+  </text>
+
+  <!-- Divider line -->
+  <rect x="520" y="275" width="240" height="2" rx="1" fill="url(#accent)" opacity="0.4"/>
+
+  <!-- Tagline -->
+  <text x="640" y="310" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="400"
+        text-anchor="middle" fill="#94a3b8" letter-spacing="1">
+    84 Skills  ·  7 Agents  ·  22 Instructions  ·  MCP Tools
+  </text>
+
+  <!-- Bottom tagline -->
+  <text x="640" y="380" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="300"
+        text-anchor="middle" fill="#94a3b8" opacity="0.6" letter-spacing="2">
+    The AI that grows with you — No extension required
+  </text>
+
+  <!-- Ghost watermark -->
+  <text x="640" y="410" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="300"
+        text-anchor="middle" fill="#f1f5f9" opacity="0.15" letter-spacing="4">
+    CORREAX
+  </text>
+</svg>
